@@ -34,7 +34,7 @@ const ACADEMIC_PROFILE = {
     { label: "Twitter / X", icon: "fa-brands fa-x-twitter", url: "https://twitter.com" },
     { label: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://www.linkedin.com/in/shailendra-dabral/" },
     { label: "Email", icon: "fa-solid fa-envelope", url: "mailto:ms2404121005@alum.iiti.ac.in" },
-    { label: "Curriculum Vitae", icon: "fa-solid fa-file-pdf", url: "assets/pdf/cv-placeholder.pdf", isCv: true }
+    { label: "Curriculum Vitae", icon: "fa-solid fa-file-pdf", url: "resume.pdf", isCv: true }
   ],
 
   // ---------------- Research Focus Areas ----------------
