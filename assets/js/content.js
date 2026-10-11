@@ -160,87 +160,23 @@ const ACADEMIC_PROFILE = {
     --------------------------------------------------------------- */
     {
       id: "vance2026sample",
-      title: "Sample-Efficient Policy Generalization under Non-Stationary Dynamics",
-      authors: ["Alex Vance", "David K. Miller", "Sarah Jenkins"],
-      venue: "International Conference on Machine Learning (ICML)",
-      year: 2026,
-      type: "conference",
-      badge: "Spotlight",
+      title: "#",
+      authors: ["#"],
+      venue: "#)",
+      year: "#",
+      type: "#",
+      badge: "#",
       links: {
         pdf: "#",
-        arxiv: "https://arxiv.org/abs/2605.67890",
-        code: "https://github.com/example/sample-efficient-dynamics"
+        arxiv: "#",
+        code: "#"
       },
       abstract: "Adapting reinforcement learning policies under sudden environment phase shifts remains a critical challenge. We propose a recursive Bayesian meta-objective that optimizes transition bounds $\\min_\\theta \\mathbb{E}_{\\tau \\sim \\mathcal{D}}[\\mathcal{L}_{adapt}(\\theta)]$, achieving rapid asymptotic stability in under 50 interactions.",
-      bibtex: `@inproceedings{vance2026sample,
-  title     = {Sample-Efficient Policy Generalization under Non-Stationary Dynamics},
-  author    = {Vance, Alex and Miller, David K. and Jenkins, Sarah},
-  booktitle = {International Conference on Machine Learning (ICML)},
-  year      = {2026}
-}`
-    },
-    {
-      id: "vance2025emergent",
-      title: "Emergent Communication Protocols in Cooperative Multi-Agent Reinforcement Learning",
-      authors: ["Elena Rostova", "Alex Vance", "Marcus Chen"],
-      venue: "Journal of Artificial Intelligence Research (JAIR)",
-      year: 2025,
-      type: "journal",
-      badge: null,
-      links: {
-        pdf: "#",
-        arxiv: "https://arxiv.org/abs/2510.11223"
-      },
-      abstract: "We analyze the linguistic topology of discrete symbolic communication in multi-agent reinforcement learning. Through information-theoretic bounds, we show that agents converge to compositional protocols that resist noise channel perturbations up to signal-to-noise ratio $\\text{SNR} \\approx -6\\text{dB}$.",
-      bibtex: `@article{vance2025emergent,
-  title   = {Emergent Communication Protocols in Cooperative Multi-Agent Reinforcement Learning},
-  author  = {Rostova, Elena and Vance, Alex and Chen, Marcus},
-  journal = {Journal of Artificial Intelligence Research (JAIR)},
-  volume  = {74},
-  pages   = {101--145},
-  year    = {2025}
-}`
-    },
-    {
-      id: "vance2025causal",
-      title: "Causal World Models for Robust Robotic Dexterity",
-      authors: ["Alex Vance", "Sarah Jenkins"],
-      venue: "IEEE Transactions on Robotics (T-RO)",
-      year: 2025,
-      type: "journal",
-      badge: "Featured Article",
-      links: {
-        pdf: "#",
-        project: "https://example.org/projects/causal-robotics"
-      },
-      abstract: "Standard predictive models often hallucinate contact dynamics during occlusions. We propose a structural causal formulation that enforces conservation of momentum constraints $\\sum \\mathbf{F}_{ext} = m \\mathbf{a}$, drastically improving dexterity with compliant end-effectors.",
-      bibtex: `@article{vance2025causal,
-  title   = {Causal World Models for Robust Robotic Dexterity},
-  author  = {Vance, Alex and Jenkins, Sarah},
-  journal = {IEEE Transactions on Robotics (T-RO)},
-  year    = {2025}
-}`
-    },
-    {
-      id: "vance2024recursive",
-      title: "Recursive Multi-Agent Theory of Mind for Zero-Shot Ad-Hoc Teamwork",
-      authors: ["Alex Vance", "Marcus Chen", "Elena Rostova", "Robert Thorne"],
-      venue: "arXiv preprint arXiv:2412.04567",
-      year: 2024,
-      type: "preprint",
-      badge: "Preprint",
-      links: {
-        arxiv: "https://arxiv.org/abs/2412.04567",
-        code: "https://github.com/example/adhoc-teamwork"
-      },
-      abstract: "When collaborating with unknown teammates without prior coordination, agents must infer partner intentions in real time. We present Level-$k$ Intention Filtering (LIF), proving zero-shot coordination Pareto-optimality under mild bounded-rationality assumptions.",
-      bibtex: `@article{vance2024recursive,
-  title   = {Recursive Multi-Agent Theory of Mind for Zero-Shot Ad-Hoc Teamwork},
-  author  = {Vance, Alex and Chen, Marcus and Rostova, Elena and Thorne, Robert},
-  journal = {arXiv preprint arXiv:2412.04567},
-  year    = {2024}
-}`
-    }
+      bibtex: `#`
+  
+    } 
+    
+    
     /* ------------------- end of sample entries ------------------- */
   ],
 
