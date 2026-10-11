@@ -158,7 +158,7 @@ const ACADEMIC_PROFILE = {
        "Alex Vance" and co-authors). Remove them once you've added your
        own publications, so visitors only see your real work.
     --------------------------------------------------------------- */
-    {
+    /*{
       id: "#",
       title: "#",
       authors: "#",
@@ -174,7 +174,7 @@ const ACADEMIC_PROFILE = {
       abstract: "#",
       bibtex: `#`
   
-    } 
+    }*/ 
     
     
     /* ------------------- end of sample entries ------------------- */
