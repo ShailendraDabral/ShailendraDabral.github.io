@@ -27,12 +27,12 @@ const ACADEMIC_PROFILE = {
   // ---------------- Academic & Social Links ----------------
   // Set url to "#" or null to omit any link
   links: [
-    { label: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "https://scholar.google.com" },
-    { label: "arXiv", icon: "fa-solid fa-book-open", url: "https://arxiv.org" },
-    { label: "ORCID", icon: "fa-brands fa-orcid", url: "https://orcid.org" },
+    { label: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "#" },
+    { label: "arXiv", icon: "fa-solid fa-book-open", url: "#" },
+    { label: "ORCID", icon: "fa-brands fa-orcid", url: "https://orcid.org/0009-0007-2475-7349" },
     { label: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/ShailendraDabral" },
     { label: "Twitter / X", icon: "fa-brands fa-x-twitter", url: "https://twitter.com" },
-    { label: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://linkedin.com" },
+    { label: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://www.linkedin.com/in/shailendra-dabral/" },
     { label: "Email", icon: "fa-solid fa-envelope", url: "mailto:ms2404121005@alum.iiti.ac.in" },
     { label: "Curriculum Vitae", icon: "fa-solid fa-file-pdf", url: "assets/pdf/cv-placeholder.pdf", isCv: true }
   ],
@@ -99,27 +99,30 @@ const ACADEMIC_PROFILE = {
   // LaTeX equations in title/abstract are rendered via KaTeX: e.g. $O(N \log N)$ or $\mathcal{L}_{reg}$
   publications: [
     {
-      id: "vance2026autonomous",
-      title: "Autonomous Tool-Use via Latent Skill Composition in Vision-Language Models",
-      authors: ["Alex Vance", "Elena Rostova", "Marcus Chen", "Sarah Jenkins"],
-      venue: "Conference on Neural Information Processing Systems (NeurIPS)",
+      id: "dabral2026pidmdpphysicsinformeddiffusiondormandprince",
+      title: "PIDM-DP: Physics-Informed Diffusion with Dormand-Prince Integration for Chaotic System Identification and State Reconstruction across Multiple Dynamical Regimes",
+      authors: ["Shailendra Dabral"],
+      venue: "#",
       year: 2026,
-      type: "conference",
-      badge: "Oral Presentation (Top 1.5%)",
+      type: "Preprint",
+      badge: "#",
       links: {
         pdf: "#",
-        arxiv: "https://arxiv.org/abs/2609.12345",
-        code: "https://github.com/example/autonomous-tool-use",
-        project: "https://example.org/projects/autonomous-tool-use",
+        arxiv: "https://arxiv.org/abs/2605.26619",
+        code: "#",
+        project: "#",
         slides: "#"
       },
-      abstract: "We introduce LatentSkill-VLA, an architecture that bridges high-level semantic reasoning with low-level closed-loop trajectory generation. By formulating skill composition over a continuous latent manifold $\\mathcal{M} \\subset \\mathbb{R}^d$, our policy reduces execution failure rates by $38.4\\%$ across 60 challenging multi-step manipulation benchmarks.",
-      bibtex: `@inproceedings{vance2026autonomous,
-  title     = {Autonomous Tool-Use via Latent Skill Composition in Vision-Language Models},
-  author    = {Vance, Alex and Rostova, Elena and Chen, Marcus and Jenkins, Sarah},
-  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year      = {2026}
-}`
+      abstract: "Reconstructing continuous state trajectories of chaotic dynamical systems from sparse, noisy observations remains a fundamental open problem in nonlinear science. We introduce the Physics-Informed Diffusion Model with Dormand-Prince Integration (PIDM-DP), which embeds a fully differentiable 5th-order Dormand-Prince (DP-RK45) ODE integrator directly into the reverse sampling loop of a Denoising Diffusion Probabilistic Model (DDPM). At each denoising step, physics residuals are back-propagated via automatic differentiation, constraining every generated trajectory to satisfy the system's governing equations to 5th-order accuracy. A linear-scheduled guidance mechanism that ramps the physics weight from zero at high noise levels to its full value near the clean-data limit prevents the gradient explosions that cause naive physics-informed approaches to fail on stiff systems with Jacobian eigenvalues of order O(103). Evaluated across five benchmark systems of increasing complexity 3D Lorenz, 3D Rössler, 5D Hyperchaotic, 20D Lorenz-96, and the stiff 3D Rabinovich-Fabrikant at 10% observation density with additive Gaussian noise (σ=0.05), PIDM-DP achieves reconstruction RMSE improvements of up to 15.4× over an unconstrained diffusion baseline and decisively outperforms the Ensemble Kalman Filter on stiff systems where ensemble covariance collapses. On the Rabinovich-Fabrikant out-of-distribution benchmark, PIDM-DP attains RMSE 0.1097±0.0269 versus 0.9443±0.5288 (unconstrained diffusion, 8.6× worse) and 0.3561±0.3040 (EnKF, 3.2× worse), with p<0.001 in paired Wilcoxon tests (N=30). Topological validation via the Rosenstein Lyapunov estimator confirms that PIDM-DP preserves the chaotic invariant measure.",
+      bibtex: `@misc{dabral2026pidmdpphysicsinformeddiffusiondormandprince,
+      title={PIDM-DP: Physics-Informed Diffusion with Dormand-Prince Integration for Chaotic System Identification and State Reconstruction across Multiple Dynamical Regimes}, 
+      author={Shailendra Dabral},
+      year={2026},
+      eprint={2605.26619},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.26619}, 
+}
     },
     {
       id: "vance2026sample",
