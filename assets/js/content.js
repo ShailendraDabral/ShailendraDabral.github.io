@@ -159,10 +159,10 @@ const ACADEMIC_PROFILE = {
        own publications, so visitors only see your real work.
     --------------------------------------------------------------- */
     {
-      id: "vance2026sample",
+      id: "#",
       title: "#",
-      authors: ["#"],
-      venue: "#)",
+      authors: "#",
+      venue: "#",
       year: "#",
       type: "#",
       badge: "#",
@@ -171,7 +171,7 @@ const ACADEMIC_PROFILE = {
         arxiv: "#",
         code: "#"
       },
-      abstract: "Adapting reinforcement learning policies under sudden environment phase shifts remains a critical challenge. We propose a recursive Bayesian meta-objective that optimizes transition bounds $\\min_\\theta \\mathbb{E}_{\\tau \\sim \\mathcal{D}}[\\mathcal{L}_{adapt}(\\theta)]$, achieving rapid asymptotic stability in under 50 interactions.",
+      abstract: "#",
       bibtex: `#`
   
     } 
