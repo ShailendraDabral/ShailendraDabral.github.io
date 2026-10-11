@@ -28,7 +28,7 @@ const ACADEMIC_PROFILE = {
   // Set url to "#" or null to omit any link
   links: [
     { label: "Google Scholar", icon: "fa-solid fa-graduation-cap", url: "#" },
-    { label: "arXiv", icon: "fa-solid fa-book-open", url: "#" },
+    { label: "arXiv", icon: "fa-solid fa-book-open", url: "https://arxiv.org/abs/2605.26619" },
     { label: "ORCID", icon: "fa-brands fa-orcid", url: "https://orcid.org/0009-0007-2475-7349" },
     { label: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/ShailendraDabral" },
     { label: "Twitter / X", icon: "fa-brands fa-x-twitter", url: "https://twitter.com" },
@@ -95,17 +95,44 @@ const ACADEMIC_PROFILE = {
   ],
 
   // ---------------- Publications & Preprints ----------------
-  // type: 'conference' | 'journal' | 'preprint'
+  // type: 'conference' | 'journal' | 'preprint'  (lowercase — used by the filter buttons)
   // LaTeX equations in title/abstract are rendered via KaTeX: e.g. $O(N \log N)$ or $\mathcal{L}_{reg}$
   publications: [
+    {
+      id: "dabral2026geoham",
+      title: "GeoHam: Symplectic-Regularized Feature Evolution for Efficient Remote Sensing Change Detection",
+      authors: ["Shailendra Dabral", "Unmesh Khati", "Yash Raj"],
+      venue: "IEEE Geoscience and Remote Sensing Letters (GRSL), vol. 23, pp. 6019005",
+      year: 2026,
+      type: "journal",
+      badge: null,
+      links: {
+        doi: "https://doi.org/10.1109/LGRS.2026.3728830",
+        pdf: "#",
+        arxiv: "#",
+        code: "#"
+      },
+      // TODO: replace with your paper's real abstract text.
+      abstract: "GeoHam is a geometric-regularization framework inspired by Hamiltonian mechanics for remote-sensing change detection (CD). It replaces conventional feature subtraction with multiscale Störmer–Verlet symplectic integration applied to learned feature dynamics. Unlike physics-informed neural networks (PINNs) that enforce PDE residuals from physical laws, GeoHam exploits the mathematical structure of Hamiltonian mechanics as an inductive bias on bitemporal feature trajectories: the symplectic two-form is preserved at every leapfrog step, acting as a geometric regularizer that keeps distinct temporal states distinguishable. Three feature pyramid network (FPN) levels ( 64×64 , 32×32 , 16×16 ) share a single integrator projected to a common 64-D space; a raw absolute-difference skip at 128×128 preserves boundary detail. Integration steps per scale are selected by Bayesian hyperparameter optimization. GeoHam achieves F1 of 91.20%, 95.89%, and 79.56% on LEVIR-CD, CDD, and CLCD, respectively, with only 7.53M parameters and 4.72 GFLOPs, 5.3× fewer GFLOPs than StarCD-Net without any transformer, state-space model, or cross-attention block.",
+      bibtex: `@ARTICLE{11672711,
+  author={Dabral, Shailendra and Khati, Unmesh and Raj, Yash},
+  journal={IEEE Geoscience and Remote Sensing Letters},
+  title={GeoHam: Symplectic-Regularized Feature Evolution for Efficient Remote Sensing Change Detection},
+  year={2026},
+  volume={23},
+  number={},
+  pages={6019005-6019005},
+  keywords={Signal detection;Remote sensing;Learning (artificial intelligence);Modeling;Training;Dies;Geoscience and remote sensing;Change detection (CD);efficient deep learning;feature pyramid network (FPN);Hamiltonian mechanics;remote sensing;symplectic integration},
+  doi={10.1109/LGRS.2026.3728830}}`
+    },
     {
       id: "dabral2026pidmdpphysicsinformeddiffusiondormandprince",
       title: "PIDM-DP: Physics-Informed Diffusion with Dormand-Prince Integration for Chaotic System Identification and State Reconstruction across Multiple Dynamical Regimes",
       authors: ["Shailendra Dabral"],
-      venue: "#",
+      venue: "arXiv preprint arXiv:2605.26619",
       year: 2026,
-      type: "Preprint",
-      badge: "#",
+      type: "preprint",
+      badge: "Preprint",
       links: {
         pdf: "#",
         arxiv: "https://arxiv.org/abs/2605.26619",
@@ -113,17 +140,24 @@ const ACADEMIC_PROFILE = {
         project: "#",
         slides: "#"
       },
-      abstract: "Reconstructing continuous state trajectories of chaotic dynamical systems from sparse, noisy observations remains a fundamental open problem in nonlinear science. We introduce the Physics-Informed Diffusion Model with Dormand-Prince Integration (PIDM-DP), which embeds a fully differentiable 5th-order Dormand-Prince (DP-RK45) ODE integrator directly into the reverse sampling loop of a Denoising Diffusion Probabilistic Model (DDPM). At each denoising step, physics residuals are back-propagated via automatic differentiation, constraining every generated trajectory to satisfy the system's governing equations to 5th-order accuracy. A linear-scheduled guidance mechanism that ramps the physics weight from zero at high noise levels to its full value near the clean-data limit prevents the gradient explosions that cause naive physics-informed approaches to fail on stiff systems with Jacobian eigenvalues of order O(103). Evaluated across five benchmark systems of increasing complexity 3D Lorenz, 3D Rössler, 5D Hyperchaotic, 20D Lorenz-96, and the stiff 3D Rabinovich-Fabrikant at 10% observation density with additive Gaussian noise (σ=0.05), PIDM-DP achieves reconstruction RMSE improvements of up to 15.4× over an unconstrained diffusion baseline and decisively outperforms the Ensemble Kalman Filter on stiff systems where ensemble covariance collapses. On the Rabinovich-Fabrikant out-of-distribution benchmark, PIDM-DP attains RMSE 0.1097±0.0269 versus 0.9443±0.5288 (unconstrained diffusion, 8.6× worse) and 0.3561±0.3040 (EnKF, 3.2× worse), with p<0.001 in paired Wilcoxon tests (N=30). Topological validation via the Rosenstein Lyapunov estimator confirms that PIDM-DP preserves the chaotic invariant measure.",
+      abstract: "Reconstructing continuous state trajectories of chaotic dynamical systems from sparse, noisy observations remains a fundamental open problem in nonlinear science. We introduce the Physics-Informed Diffusion Model with Dormand-Prince Integration (PIDM-DP), which embeds a fully differentiable 5th-order Dormand-Prince (DP-RK45) ODE integrator directly into the reverse sampling loop of a Denoising Diffusion Probabilistic Model (DDPM). At each denoising step, physics residuals are back-propagated via automatic differentiation, constraining every generated trajectory to satisfy the system's governing equations to 5th-order accuracy. A linear-scheduled guidance mechanism that ramps the physics weight from zero at high noise levels to its full value near the clean-data limit prevents the gradient explosions that cause naive physics-informed approaches to fail on stiff systems with Jacobian eigenvalues of order O(10^3). Evaluated across five benchmark systems of increasing complexity — 3D Lorenz, 3D Rössler, 5D Hyperchaotic, 20D Lorenz-96, and the stiff 3D Rabinovich-Fabrikant — at 10% observation density with additive Gaussian noise (σ=0.05), PIDM-DP achieves reconstruction RMSE improvements of up to 15.4× over an unconstrained diffusion baseline and decisively outperforms the Ensemble Kalman Filter on stiff systems where ensemble covariance collapses. On the Rabinovich-Fabrikant out-of-distribution benchmark, PIDM-DP attains RMSE 0.1097±0.0269 versus 0.9443±0.5288 (unconstrained diffusion, 8.6× worse) and 0.3561±0.3040 (EnKF, 3.2× worse), with p<0.001 in paired Wilcoxon tests (N=30). Topological validation via the Rosenstein Lyapunov estimator confirms that PIDM-DP preserves the chaotic invariant measure.",
       bibtex: `@misc{dabral2026pidmdpphysicsinformeddiffusiondormandprince,
-      title={PIDM-DP: Physics-Informed Diffusion with Dormand-Prince Integration for Chaotic System Identification and State Reconstruction across Multiple Dynamical Regimes}, 
-      author={Shailendra Dabral},
-      year={2026},
-      eprint={2605.26619},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2605.26619}, 
-}
+  title={PIDM-DP: Physics-Informed Diffusion with Dormand-Prince Integration for Chaotic System Identification and State Reconstruction across Multiple Dynamical Regimes},
+  author={Shailendra Dabral},
+  year={2026},
+  eprint={2605.26619},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2605.26619},
+}`
     },
+
+    /* ---------------------------------------------------------------
+       SAMPLE / PLACEHOLDER ENTRIES BELOW
+       These four are the template's example papers (fictional author
+       "Alex Vance" and co-authors). Remove them once you've added your
+       own publications, so visitors only see your real work.
+    --------------------------------------------------------------- */
     {
       id: "vance2026sample",
       title: "Sample-Efficient Policy Generalization under Non-Stationary Dynamics",
@@ -207,6 +241,7 @@ const ACADEMIC_PROFILE = {
   year    = {2024}
 }`
     }
+    /* ------------------- end of sample entries ------------------- */
   ],
 
   // ---------------- Experience & Education ----------------
@@ -236,13 +271,13 @@ const ACADEMIC_PROFILE = {
       period: "2024 — 2026",
       degree: "MS-Research in Space Science and Engineering",
       org: "Indian Institute of Technology Indore",
-      desc: "Thesis: <em>Advance techniques in Remote Sensing Change Detection(Developed Model for benchmarking in domain of Change detection and also worked on developing Multiple Hybrid machine learning models for infrastructure monitoring )</em>.<br>Advisor: Associate Prof. Unmesh Khati."
+      desc: "Thesis: <em>Advance techniques in Remote Sensing Change Detection (Developed Model for benchmarking in domain of Change Detection and also worked on developing Multiple Hybrid machine learning models for infrastructure monitoring)</em>.<br>Advisor: Associate Prof. Unmesh Khati."
     },
-    { 
+    {
       period: "2018 - 2020",
       degree: "Masters in Physical Science",
       org: "Hemwati Nandan Bahuguna Central University"
-     },
+    },
     {
       period: "2015 — 2018",
       degree: "Bachelors in Mathematics, Physics and Computer Science",
@@ -258,17 +293,14 @@ const ACADEMIC_PROFILE = {
       semester: "Spring 2025",
       title: "Electromagnetism",
       role: "Teaching Assistant",
-      desc: "Delivered lectures on Electric and Magnetic Potentials, Dielectrics, Maxwells equations etc."
+      desc: "Delivered lectures on Electric and Magnetic Potentials, Dielectrics, Maxwell's equations etc."
     },
     {
       code: "AA 607",
       semester: "Autumn 2025",
       title: "Remote Sensing Earth Observation",
       role: "Teaching Assistant",
-      desc: "Managed course projects and exams, led lab classes each week throughout the course ."
-    },
-    {
-
+      desc: "Managed course projects and exams, led lab classes each week throughout the course."
     }
   ],
 
