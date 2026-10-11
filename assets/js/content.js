@@ -12,7 +12,7 @@ const ACADEMIC_PROFILE = {
   name: "Shailendra Dabral",
   initials: "SD",
   role: "MS Research student in Astronomy Astrophysics and Space Engineering",
-  affiliation: "S.A.R Lab, Indian Institute of Technology",
+  affiliation: "S.A.R Lab(Satellite and Ariel Remote Sensing), Indian Institute of Technology Indore",
   affiliationUrl: "https://iiti.ac.in",
   status: "Freelancer",
   avatar: "assets/img/avatar-placeholder.svg",
@@ -40,22 +40,22 @@ const ACADEMIC_PROFILE = {
   // ---------------- Research Focus Areas ----------------
   researchFocus: [
     {
-      title: "Foundation Models for Embodied AI",
+      title: "Generative AI for Chaos",
       icon: "fa-solid fa-robot",
-      description: "Investigating how vision-language-action (VLA) models generalize spatial reasoning and tool use in complex robotic manipulation tasks.",
-      tags: ["VLA Models", "Robotics", "Generalization", "Affordance Learning"]
+      description: "Using Diffusion model for generating the trajectory of five theorectical chaotic model with 10% observation including introduction of noise to resemble real world condition  .",
+      tags: ["Lorenz-63", "Rabinovich", "Hyper-5d", "Rossler attractor, Lorenz-96"]
     },
     {
-      title: "Multi-Agent Coordination & Theory of Mind",
+      title: " State-of-the-art benchmarking in Change detection ",
       icon: "fa-solid fa-network-wired",
-      description: "Developing scalable communication protocols and recursive belief modeling for autonomous multi-agent swarms and human-agent teams.",
-      tags: ["MARL", "Communication Protocols", "Game Theory", "Ad-Hoc Teamwork"]
+      description: "Developing Physics inspired architecture which can compete with current state-of-the-art models based on Transformers tested on multiple public change detection benchmark dataset.",
+      tags: ["Symplectic Integrator", "Hamiltonian", "Transformers", "G-Flops"]
     },
     {
-      title: "Sample-Efficient Self-Supervised Learning",
+      title: "Change Detection for Infrastructure Monitering",
       icon: "fa-solid fa-brain",
-      description: "Bridging non-contrastive representation learning with causal state abstractions for robust policy learning under distribution shifts.",
-      tags: ["Self-Supervised", "Causal Abstractions", "Out-of-Distribution", "Representation"]
+      description: "Developing Hybrid ML models and workflow for rare class change detection in Infrastructure monitering using Planetscope satellite imagery  .",
+      tags: ["Rare Class changes", "Planetscope Satellite Images", "Hybrid Models", "Spectral Indices"]
     }
   ],
 
@@ -63,35 +63,12 @@ const ACADEMIC_PROFILE = {
   // Tag types: 'paper', 'talk', 'award', 'service'
   news: [
     {
-      date: "Oct 2026",
-      tag: "award",
-      tagLabel: "Award",
-      content: "Received the <strong>Outstanding Reviewer Award</strong> at NeurIPS 2026."
-    },
-    {
-      date: "Sep 2026",
-      tag: "paper",
-      tagLabel: "Paper",
-      content: "Our paper on <em>Autonomous Tool-Use via Latent Skill Composition</em> was accepted to <strong>NeurIPS 2026 (Oral)</strong>!"
-    },
-    {
-      date: "Jul 2026",
-      tag: "talk",
-      tagLabel: "Talk",
-      content: "Invited speaker at the ICML Workshop on Next-Generation Multi-Agent Systems in Vienna."
-    },
-    {
-      date: "May 2026",
-      tag: "paper",
-      tagLabel: "Paper",
-      content: "Paper on <em>Sample-Efficient Foundation Policies</em> accepted to <strong>ICML 2026</strong>."
-    },
-    {
-      date: "Jan 2026",
-      tag: "service",
-      tagLabel: "Service",
-      content: "Serving as Workshop Co-Chair for the 2026 Symposium on Embodied Intelligence."
+      date: "Mar 2026",
+      tag: "Paper submission in AIP Chaos",
+      tagLabel: "Under Review",
+      content: "Title of the Paper: <strong>Amortised Chaotic System Identification and State Reconstruction viaPhysics-Informed Diffusion with Dormand-Prince Integration."
     }
+   
   ],
 
   // ---------------- Publications & Preprints ----------------
@@ -154,9 +131,6 @@ const ACADEMIC_PROFILE = {
 
     /* ---------------------------------------------------------------
        SAMPLE / PLACEHOLDER ENTRIES BELOW
-       These four are the template's example papers (fictional author
-       "Alex Vance" and co-authors). Remove them once you've added your
-       own publications, so visitors only see your real work.
     --------------------------------------------------------------- */
     /*{
       id: "#",
@@ -182,23 +156,29 @@ const ACADEMIC_PROFILE = {
 
   // ---------------- Experience & Education ----------------
   experience: [
+
     {
-      period: "2024 — Present",
-      role: "Postdoctoral Research Fellow",
-      org: "Stanford University, SVL Lab",
-      desc: "Investigating foundation models for robotics and long-horizon decision making with Prof. Sarah Jenkins."
+      period: "Summer 2025 — 2026",
+      role: "Research Student",
+      org: "Indian Institute of Technology Indore",
+      desc: "Worked as research student in SAR lab (Satellite and Remote Sensing Lab)."
     },
     {
-      period: "Summer 2023",
-      role: "Research Scientist Intern",
-      org: "Google DeepMind",
-      desc: "Developed hierarchical reinforcement learning algorithms for multi-agent simulation environments."
+      period: "2024 — 2025",
+      role: "Teaching Assistant",
+      org: "Indian Institute of Technology Indore",
+      desc: "Taught Electrodynamics to first year Btech students and conduct labs and experiment to first year Masters and Phd students under Remote Sensing and Earth Observation Course."
     },
     {
-      period: "Summer 2022",
-      role: "AI Research Intern",
-      org: "Meta FAIR (Fundamental AI Research)",
-      desc: "Worked on self-supervised visual representation learning and sample efficiency in embodied benchmarks."
+      period: "2024 — 2025",
+      role: "Gym Co-ordinator",
+      org: "Indian Institute of Technology Indore",
+      desc: "Taken responsibity of enhancing the gym services and motivative students to look after their physical and mental health "
+    {
+      period: "2021 — 2022",
+      role: "Teacher",
+      org: "Saraswati Madhi cololony chauras",
+      desc: "Worked as a teacher of Physics for the intermediate class student(12th standard)."
     }
   ],
 
@@ -242,20 +222,17 @@ const ACADEMIC_PROFILE = {
 
   // ---------------- Academic Service & Honors ----------------
   service: {
-    reviewing: [
+    /*reviewing: [
       "Conference on Neural Information Processing Systems (NeurIPS) — 2023, 2024, 2025, 2026",
       "International Conference on Machine Learning (ICML) — 2024, 2025, 2026",
       "International Conference on Learning Representations (ICLR) — 2024, 2025, 2026",
       "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) — 2023, 2024",
       "Journal of Machine Learning Research (JMLR) — Reviewer",
       "IEEE Transactions on Robotics (T-RO) — Reviewer"
-    ],
+    ],*/
     honors: [
-      "NeurIPS Outstanding Reviewer Award (Top 5%) — 2026",
-      "ICLR Spotlight Paper Award — 2026",
-      "Carnegie Mellon Presidential Graduate Fellowship — 2021",
-      "UW Department of Computer Science Outstanding Senior Thesis Award — 2019",
-      "Dean's Honor List (All Quarters), University of Washington — 2015 — 2019"
+      "First Runner up in IEEE science day hackathon — 2025",
+
     ]
   }
 };
