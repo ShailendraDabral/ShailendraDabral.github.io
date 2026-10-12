@@ -66,7 +66,7 @@ const ACADEMIC_PROFILE = {
       date: "Mar 2026",
       tag: "Paper submission in AIP Chaos",
       tagLabel: "Under Review",
-      content: "Title of the Paper: <strong>Amortised Chaotic System Identification and State Reconstruction viaPhysics-Informed Diffusion with Dormand-Prince Integration."
+      content: "Title of the Paper: </strong>Amortised Chaotic System Identification and State Reconstruction viaPhysics-Informed Diffusion with Dormand-Prince Integration."
     }
    
   ],
@@ -174,6 +174,7 @@ const ACADEMIC_PROFILE = {
       role: "Gym Co-ordinator",
       org: "Indian Institute of Technology Indore",
       desc: "Taken responsibity of enhancing the gym services and motivative students to look after their physical and mental health "
+    },
     {
       period: "2021 — 2022",
       role: "Teacher",
