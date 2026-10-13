@@ -11,7 +11,7 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const strip = (html) => { const d = document.createElement("div"); d.innerHTML = html; return d.textContent; };
   const isReal = (u) => !!u && u !== "#";
-  const dash = (s) => String(s ?? "").replace(/\s—\s/g, "–");
+  const dash = (s) => String(s ?? "").replace(/\s[—-]\s/g, "–");
 
   const pubs = (P.publications || []).slice().sort((a, b) => b.year - a.year);
   const links = (P.links || []).filter((l) => isReal(l.url));
@@ -25,6 +25,7 @@
     research:     { label: "research",     tint: "teal",    render: renderResearch },
     news:         { label: "news",         tint: "magenta", render: renderNews },
     experience:   { label: "experience",   tint: "violet",  render: renderExperience },
+    education:    { label: "education",    tint: "emerald", render: renderEducation },
     teaching:     { label: "teaching",     tint: "orange",  render: renderTeaching },
     service:      { label: "service",      tint: "amber",   render: renderService },
     contact:      { label: "contact",      tint: "cyan",    render: renderContact }
@@ -147,7 +148,7 @@
             faces: [iconFace("fa-solid fa-briefcase"), ...exp.slice(0, 3).map((x) => face(dash(x.period), esc(x.role), esc(x.org)))]
           }),
           tile({
-            open: "experience:edu", tint: "emerald", label: "education",
+            open: "education", tint: "emerald", label: "education",
             aria: "Education",
             faces: [iconFace("fa-solid fa-graduation-cap"), ...edu.slice(0, 2).map((x) => face(dash(x.period), "", esc(x.degree)))]
           }),
@@ -431,7 +432,8 @@
   }
 
   function routeFromHash(fromHistory) {
-    const key = decodeURIComponent(location.hash.slice(1));
+    let key = decodeURIComponent(location.hash.slice(1));
+    if (key === "experience:edu") { key = "education"; history.replaceState(history.state, "", "#education"); }
     const base = key.split(":")[0];
     if (SECTIONS[base]) openPanel(key, { fromHistory });
     else if (panel().open) closePanel();
@@ -539,34 +541,12 @@
     </li>`;
   }
 
-  function renderExperience(body, tab) {
-    const edu = tab === "edu";
-    body.innerHTML = `
-      <div class="segmented" role="tablist" aria-label="Positions or education">
-        <button type="button" role="tab" id="tab-work" aria-controls="panel-work" aria-selected="${!edu}" tabindex="${edu ? -1 : 0}">Positions</button>
-        <button type="button" role="tab" id="tab-edu" aria-controls="panel-edu" aria-selected="${edu}" tabindex="${edu ? 0 : -1}">Education</button>
-      </div>
-      <ol class="entries tab-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work"${edu ? " hidden" : ""}>
-        ${(P.experience || []).map((x) => entryHTML(x.period, x.role, x.org, x.desc)).join("")}</ol>
-      <ol class="entries tab-panel" id="panel-edu" role="tabpanel" aria-labelledby="tab-edu"${edu ? "" : " hidden"}>
-        ${(P.education || []).map((x) => entryHTML(x.period, x.degree, x.org, x.desc)).join("")}</ol>`;
-    const tabs = $$('[role="tab"]', body);
-    const select = (t) => {
-      tabs.forEach((x) => {
-        const on = x === t;
-        x.setAttribute("aria-selected", String(on)); x.tabIndex = on ? 0 : -1;
-        document.getElementById(x.getAttribute("aria-controls")).hidden = !on;
-      });
-      history.replaceState(history.state, "", `#experience${t.id === "tab-edu" ? ":edu" : ""}`);
-    };
-    tabs.forEach((t, i) => {
-      t.addEventListener("click", () => select(t));
-      t.addEventListener("keydown", (e) => {
-        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-        e.stopPropagation();
-        const n = tabs[(i + 1) % tabs.length]; select(n); n.focus();
-      });
-    });
+  function renderExperience(body) {
+    body.innerHTML = `<ol class="entries">${(P.experience || []).map((x) => entryHTML(x.period, x.role, x.org, x.desc)).join("")}</ol>`;
+  }
+
+  function renderEducation(body) {
+    body.innerHTML = `<ol class="entries">${(P.education || []).map((x) => entryHTML(x.period, x.degree, x.org, x.desc)).join("")}</ol>`;
   }
 
   function renderTeaching(body) {
@@ -602,7 +582,7 @@
   }
 
   /* ---------------- Publications ---------------- */
-  const LINK_LABELS = { pdf: "PDF", arxiv: "arXiv", code: "Code", project: "Project page", slides: "Slides", video: "Video", poster: "Poster" };
+  const LINK_LABELS = { pdf: "PDF", arxiv: "arXiv", code: "Code", project: "Project page", slides: "Slides", video: "Video", poster: "Poster", doi: "DOI" };
   const pubState = { filter: "all", query: "" };
 
   function renderPublications(body) {
