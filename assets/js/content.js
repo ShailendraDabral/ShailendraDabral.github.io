@@ -31,8 +31,8 @@ const ACADEMIC_PROFILE = {
     { label: "arXiv", icon: "fa-solid fa-book-open", url: "https://arxiv.org/abs/2605.26619" },
     { label: "ORCID", icon: "fa-brands fa-orcid", url: "https://orcid.org/0009-0007-2475-7349" },
     { label: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/ShailendraDabral" },
-    { label: "Twitter / X", icon: "fa-brands fa-x-twitter", url: "https://twitter.com" },
-    { label: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://www.linkedin.com/in/shailendra-dabral/" },
+    { label: "Twitter / X", icon: "fa-brands fa-x-twitter", url: "https://twitter.com/" },
+    { label: "LinkedIn", icon: "fa-brands fa-linkedin", url: "https://www.linkedin.com/in/shailendra-dabral" },
     { label: "Email", icon: "fa-solid fa-envelope", url: "mailto:ms2404121005@alum.iiti.ac.in" },
     { label: "Curriculum Vitae", icon: "fa-solid fa-file-pdf", url: "assets/pdf/cv-resume.pdf", isCv: true }
   ],
