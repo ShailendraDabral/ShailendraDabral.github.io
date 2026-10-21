@@ -50,7 +50,8 @@ const ACADEMIC_PROFILE = {
       title: " State-of-the-art benchmarking in Change detection ",
       icon: "fa-solid fa-network-wired",
       description: "Developing Physics inspired architecture which can compete with current state-of-the-art models based on Transformers tested on multiple public change detection benchmark dataset.",
-      tags: ["Symplectic Integrator", "Hamiltonian", "Transformers", "G-Flops"]
+      tags: ["Symplectic Integrator", "Hamiltonian", "Transformers", "G-Flops"],
+      url: "https://github.com/ShailendraDabral/Remote-Sensing/tree/main/GeoHAM"
     },
     {
       title: "Change Detection for Infrastructure Monitering",
