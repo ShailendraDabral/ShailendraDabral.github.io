@@ -126,7 +126,7 @@
             faces: pubs.map((p) => face(`${p.year}${p.badge ? ", " + p.badge : ""}`, esc(p.title), esc(shortVenue(p.venue))))
           }),
           tile({
-            open: "projects", size: "wide", tint: "teal", label: "research", badge: (P.researchFocus || []).length,
+            open: "projects", size: "wide", tint: "teal", label: "projects", badge: (P.researchFocus || []).length,
             aria: "Research interests",
             interval: 5000,
             faces: (P.researchFocus || []).map((r) => face("", esc(r.title), esc((r.tags || []).join(", "))))
