@@ -38,7 +38,7 @@ const ACADEMIC_PROFILE = {
   ],
 
   // ---------------- Research Focus Areas ----------------
-  Projects: [
+  projects: [
     {
       title: "Generative AI for Chaos",
       icon: "fa-solid fa-robot",
