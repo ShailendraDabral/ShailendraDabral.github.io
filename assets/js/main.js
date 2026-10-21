@@ -126,10 +126,10 @@
             faces: pubs.map((p) => face(`${p.year}${p.badge ? ", " + p.badge : ""}`, esc(p.title), esc(shortVenue(p.venue))))
           }),
           tile({
-            open: "projects", size: "wide", tint: "teal", label: "projects", badge: (P.researchFocus || []).length,
+            open: "projects", size: "wide", tint: "teal", label: "projects", badge: (P.projects || []).length,
             aria: "Research interests",
             interval: 5000,
-            faces: (P.researchFocus || []).map((r) => face("", esc(r.title), esc((r.tags || []).join(", "))))
+            faces: (P.projects || []).map((r) => face("", esc(r.title), esc((r.tags || []).join(", "))))
           }),
           tile({
             open: "news", size: "wide", tint: "magenta", label: "news", badge: news.length,
@@ -306,6 +306,7 @@
     $$(".tile.is-live").forEach((t, i) => {
       const faces = $(".faces", t);
       const n = faces.children.length;
+      if (!n) return;
       // A copy of the first face at the end lets the loop keep sliding upward
       // instead of rewinding through every face when it wraps around.
       faces.appendChild(faces.children[0].cloneNode(true));
@@ -517,8 +518,8 @@
       <ul class="link-list">${links.map((l) => `<li><a href="${esc(l.url)}"${/^https?:|\.pdf$/i.test(l.url) ? ' target="_blank" rel="noopener"' : ""}><i class="${esc(l.icon)}" aria-hidden="true"></i>${esc(l.label)}</a></li>`).join("")}</ul>`;
   }
 
-  function renderResearch(body) {
-    body.innerHTML = (P.researchFocus || []).map((r) => `
+  function renderProjects(body) {
+    body.innerHTML = (P.projects || []).map((r) => `
       <article class="research-item">
         <h3>${esc(r.title)}</h3>
         <p>${r.description}</p>
