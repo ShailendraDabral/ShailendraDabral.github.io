@@ -524,6 +524,7 @@
         <h3>${esc(r.title)}</h3>
         <p>${r.description}</p>
         ${r.tags && r.tags.length ? `<ul class="tags" aria-label="Keywords">${r.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+        ${isReal(r.url) ? `<div class="pub-actions" style="margin-top: 0.75rem;"><a href="${esc(r.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Project</a></div>` : ""}
       </article>`).join("");
   }
 
