@@ -22,7 +22,7 @@
   const SECTIONS = {
     about:        { label: "about",        tint: "crimson",   render: renderAbout },
     publications: { label: "publications", tint: "cobalt",  render: renderPublications },
-    projects:     { label: "research and projects",     tint: "teal",    render: renderProjects },
+    projects:     { label: "projects",     tint: "teal",    render: renderProjects },
     news:         { label: "news",         tint: "magenta", render: renderNews },
     experience:   { label: "experience",   tint: "violet",  render: renderExperience },
     education:    { label: "education",    tint: "emerald", render: renderEducation },
@@ -117,7 +117,7 @@
 
     const groups = [
       {
-        title: "research",
+        title: "projects",
         tiles: [
           tile({
             open: "publications", size: "large", tint: "cobalt", label: "publications", badge: pubs.length,
