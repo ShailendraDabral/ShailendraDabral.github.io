@@ -22,7 +22,7 @@
   const SECTIONS = {
     about:        { label: "about",        tint: "crimson",   render: renderAbout },
     publications: { label: "publications", tint: "cobalt",  render: renderPublications },
-    research:     { label: "research",     tint: "teal",    render: renderResearch },
+    projects:     { label: "research and projects",     tint: "teal",    render: renderResearch },
     news:         { label: "news",         tint: "magenta", render: renderNews },
     experience:   { label: "experience",   tint: "violet",  render: renderExperience },
     education:    { label: "education",    tint: "emerald", render: renderEducation },
@@ -126,7 +126,7 @@
             faces: pubs.map((p) => face(`${p.year}${p.badge ? ", " + p.badge : ""}`, esc(p.title), esc(shortVenue(p.venue))))
           }),
           tile({
-            open: "research", size: "wide", tint: "teal", label: "research", badge: (P.researchFocus || []).length,
+            open: "projects", size: "wide", tint: "teal", label: "research", badge: (P.researchFocus || []).length,
             aria: "Research interests",
             interval: 5000,
             faces: (P.researchFocus || []).map((r) => face("", esc(r.title), esc((r.tags || []).join(", "))))
