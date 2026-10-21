@@ -42,9 +42,9 @@ const ACADEMIC_PROFILE = {
     {
       title: "Generative AI for Chaos",
       icon: "fa-solid fa-robot",
-      description: "Using Diffusion model for generating the trajectory of five theorectical chaotic model with 10% observation including introduction of noise to resemble real world condition  .",
+      description: "Using Diffusion model for generating the trajectory of five theorectical chaotic model with 10% observation including introduction of noise to resemble real world condition .  url:"https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/PIDM-DP-Chaos-Lorenz",
       tags: ["Lorenz-63", "Rabinovich", "Hyper-5d", "Rossler attractor", "Lorenz-96"],
-      url:"https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/PIDM-DP-Chaos-Lorenz"
+     
     },
     {
       title: " State-of-the-art benchmarking in Change detection ",
