@@ -67,7 +67,7 @@ This will automatically start a local server and open `http://localhost:8000` in
 
 ## How to Customize Your Content
 
-All personal content is centralized in **`assets/js/content.js`**. You do not need to touch complex HTML to update your information.
+All personal content is centralized in **`assets/js/content.js`**. 
 
 ### 1. Update Profile & Bio
 Open `assets/js/content.js` and edit the `ACADEMIC_PROFILE` object:
