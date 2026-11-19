@@ -40,23 +40,61 @@ const ACADEMIC_PROFILE = {
   // ---------------- Research Focus Areas ----------------
   projects: [
     {
+      title: "OpenPaper",
+      icon: "fa-solid fa-file-pen",
+      description: "A free, open-source collaborative LaTeX workspace and research editor for scientific writing. Features interactive document editing with CodeMirror, real-time preview, modular structure, bibliography management, and extensible architecture.",
+      tags: ["LaTeX Workspace", "Scientific Writing", "React", "TypeScript", "CodeMirror", "Tailwind CSS"],
+      url: "https://github.com/ShailendraDabral/OpenPaper",
+      links: [
+        { label: "GitHub Code", url: "https://github.com/ShailendraDabral/OpenPaper", icon: "fa-brands fa-github" }
+      ]
+    },
+    {
+      title: "ChaosLab",
+      icon: "fa-solid fa-atom",
+      description: "An interactive browser-based laboratory for chaotic dynamical systems, nonlinear dynamics, and numerical integration running client-side in Web Workers. Features 6 dynamical systems (Lorenz, Rössler, Duffing, Double Pendulum, Three-Body Problem, Logistic Map), 5 numerical integrators (Symplectic Euler, Störmer–Verlet, RK4, RK2, Euler), and an analysis suite for Lyapunov exponents, Poincaré sections, and phase portraits.",
+      tags: ["Chaos Theory", "Dynamical Systems", "Three.js", "Web Workers", "Symplectic Integrators", "Lyapunov Exponent"],
+      url: "https://shailendradabral.github.io/Scientific-machine-learning/chaoslab/",
+      links: [
+        { label: "Live Demo", url: "https://shailendradabral.github.io/Scientific-machine-learning/chaoslab/", icon: "fa-solid fa-play" },
+        { label: "Source Code", url: "https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/chaoslab", icon: "fa-brands fa-github" }
+      ]
+    },
+    {
+      title: "NeuralLab / NeuralPhysics",
+      icon: "fa-solid fa-brain",
+      description: "An interactive laboratory for Physics-Informed Neural Networks (PINNs) and neural operators (DeepONet, FNO, PINO). Benchmarks analytical, numerical, and neural solutions across canonical PDEs (1D/2D Heat, Wave, Burgers, Poisson) with live loss tracking, residual error field evolution, and parameter exploration.",
+      tags: ["PINNs", "Neural Operators", "DeepONet", "Fourier Neural Operator", "PyTorch", "Scientific ML"],
+      url: "https://shailendradabral.github.io/Scientific-machine-learning/neuralphysics/demo/",
+      links: [
+        { label: "Live Demo", url: "https://shailendradabral.github.io/Scientific-machine-learning/neuralphysics/demo/", icon: "fa-solid fa-play" },
+        { label: "Source Code", url: "https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/neuralphysics", icon: "fa-brands fa-github" }
+      ]
+    },
+    {
       title: "Generative AI for Chaos",
       icon: "fa-solid fa-robot",
-      description: "Using Diffusion model for generating the trajectory of five theorectical chaotic model with 10% observation including introduction of noise to resemble real world condition." ,
+      description: "Using Diffusion model for generating the trajectory of five theoretical chaotic models with 10% observation including introduction of noise to resemble real world conditions.",
       tags: ["Lorenz-63", "Rabinovich", "Hyper-5d", "Rossler attractor", "Lorenz-96"],
-      url: "https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/PIDM-DP-Chaos-Lorenz"
+      url: "https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/PIDM-DP-Chaos-Lorenz",
+      links: [
+        { label: "Source Code", url: "https://github.com/ShailendraDabral/Scientific-machine-learning/tree/main/PIDM-DP-Chaos-Lorenz", icon: "fa-brands fa-github" }
+      ]
     },
     {
-      title: " State-of-the-art benchmarking in Change detection ",
+      title: "State-of-the-art Benchmarking in Change Detection",
       icon: "fa-solid fa-network-wired",
-      description: "Developing Physics inspired architecture which can compete with current state-of-the-art models based on Transformers tested on multiple public change detection benchmark dataset.",
+      description: "Developing Physics inspired architecture (GeoHam) which can compete with current state-of-the-art models based on Transformers tested on multiple public change detection benchmark datasets.",
       tags: ["Symplectic Integrator", "Hamiltonian", "Transformers", "G-Flops"],
-      url: "https://github.com/ShailendraDabral/Remote-Sensing/tree/main/GeoHAM"
+      url: "https://github.com/ShailendraDabral/Remote-Sensing/tree/main/GeoHAM",
+      links: [
+        { label: "Source Code", url: "https://github.com/ShailendraDabral/Remote-Sensing/tree/main/GeoHAM", icon: "fa-brands fa-github" }
+      ]
     },
     {
-      title: "Change Detection for Infrastructure Monitering",
-      icon: "fa-solid fa-brain",
-      description: "Developing Hybrid ML models and workflow for rare class change detection in Infrastructure monitering using Planetscope satellite imagery  .",
+      title: "Change Detection for Infrastructure Monitoring",
+      icon: "fa-solid fa-satellite",
+      description: "Developing Hybrid ML models and workflow for rare class change detection in Infrastructure monitoring using PlanetScope satellite imagery.",
       tags: ["Rare Class changes", "Planetscope Satellite Images", "Hybrid Models", "Spectral Indices"]
     }
   ],
@@ -65,10 +103,16 @@ const ACADEMIC_PROFILE = {
   // Tag types: 'paper', 'talk', 'award', 'service'
   news: [
     {
+      date: "Nov 2026",
+      tag: "Conference Reviewer",
+      tagLabel: "Reviewer",
+      content: "Invited as a reviewer for the <strong>International Conference on Intelligent Computing and Advanced Communication Systems</strong>."
+    },
+    {
       date: "Mar 2026",
       tag: "Paper submission in AIP Chaos",
       tagLabel: "Under Review",
-      content: "Title of the Paper: </strong>Amortised Chaotic System Identification and State Reconstruction viaPhysics-Informed Diffusion with Dormand-Prince Integration."
+      content: "Title of the Paper: <em>Amortised Chaotic System Identification and State Reconstruction via Physics-Informed Diffusion with Dormand-Prince Integration</em>."
     }
    
   ],
@@ -225,17 +269,11 @@ const ACADEMIC_PROFILE = {
 
   // ---------------- Academic Service & Honors ----------------
   service: {
-    /*reviewing: [
-      "Conference on Neural Information Processing Systems (NeurIPS) — 2023, 2024, 2025, 2026",
-      "International Conference on Machine Learning (ICML) — 2024, 2025, 2026",
-      "International Conference on Learning Representations (ICLR) — 2024, 2025, 2026",
-      "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) — 2023, 2024",
-      "Journal of Machine Learning Research (JMLR) — Reviewer",
-      "IEEE Transactions on Robotics (T-RO) — Reviewer"
-    ],*/
+    reviewing: [
+      "International Conference on Intelligent Computing and Advanced Communication Systems — Reviewer (2026)"
+    ],
     honors: [
-      "First Runner up in IEEE science day hackathon — 2025",
-
+      "First Runner up in IEEE science day hackathon — 2025"
     ]
   }
 };

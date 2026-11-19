@@ -519,13 +519,23 @@
   }
 
   function renderProjects(body) {
-    body.innerHTML = (P.projects || []).map((r) => `
+    body.innerHTML = (P.projects || []).map((r) => {
+      let actionButtons = "";
+      if (Array.isArray(r.links) && r.links.length > 0) {
+        actionButtons = r.links.filter((l) => isReal(l.url)).map((l) =>
+          `<a href="${esc(l.url)}" target="_blank" rel="noopener">${l.icon ? `<i class="${esc(l.icon)}" aria-hidden="true"></i> ` : ""}${esc(l.label || "Link")}</a>`
+        ).join(" ");
+      } else if (isReal(r.url)) {
+        actionButtons = `<a href="${esc(r.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Project</a>`;
+      }
+      return `
       <article class="research-item">
         <h3>${esc(r.title)}</h3>
         <p>${r.description}</p>
         ${r.tags && r.tags.length ? `<ul class="tags" aria-label="Keywords">${r.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
-        ${isReal(r.url) ? `<div class="pub-actions" style="margin-top: 0.75rem;"><a href="${esc(r.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Project</a></div>` : ""}
-      </article>`).join("");
+        ${actionButtons ? `<div class="pub-actions" style="margin-top: 0.75rem;">${actionButtons}</div>` : ""}
+      </article>`;
+    }).join("");
   }
 
   function renderNews(body) {
