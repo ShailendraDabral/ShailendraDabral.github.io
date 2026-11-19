@@ -224,7 +224,7 @@ const ACADEMIC_PROFILE = {
     {
       period: "2021 — 2022",
       role: "Teacher",
-      org: "Saraswati Madhi cololony chauras",
+      org: "Saraswati Vidhya Mandir Madhi cololony chauras",
       desc: "Worked as a teacher of Physics for the intermediate class student(12th standard)."
     }
   ],
