@@ -124,66 +124,11 @@ Add papers to the `publications` array:
   year      = {2026}
 }`
 }
-```
 
----
 
-## Deploying to GitHub Pages (`<username>.github.io`)
 
-GitHub Pages hosts personal sites for free at `https://<username>.github.io`.
 
-### Method A: Using Git (Command Line)
 
-1. Create a new public repository on GitHub named:
-   ```text
-   <your-github-username>.github.io
-   ```
-   *(Example: if your GitHub username is `johndoe`, name the repository `johndoe.github.io`)*.
 
-2. In your local `academic-website` folder, initialize git and push:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial academic website release"
-   git branch -M main
-   git remote add origin https://github.com/<your-github-username>/<your-github-username>.github.io.git
-   git push -u origin main
-   ```
 
-3. Open **Settings > Pages** in your GitHub repository and ensure the source is set to:
-   - **Branch**: `main`
-   - **Folder**: `/ (root)`
-
-4. Your website will be live at:
-   ```text
-   https://<your-github-username>.github.io
-   ```
-
----
-
-### Method B: Uploading via GitHub Web Interface (No Command Line Needed)
-
-1. Create the repository `<your-github-username>.github.io` on [github.com/new](https://github.com/new).
-2. Click **"uploading an existing file"** on the repo home page.
-3. Drag and drop all files and folders from `academic-website/` into GitHub.
-4. Commit the changes. GitHub Pages will build and publish your site automatically within 1–2 minutes!
-
----
-
-## Custom Domain (Optional)
-
-If you own a custom domain (e.g., `www.yourname.com`):
-1. In your GitHub repository, go to **Settings > Pages > Custom domain**.
-2. Enter your custom domain name and click **Save**.
-3. In your DNS provider (e.g., Cloudflare, Namecheap, Google Domains), point your `CNAME` or `A` records to GitHub Pages:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-
----
-
-## After updating the site
-
-`index.html` loads the stylesheet and scripts with a version tag, for example `style.css?v=2026-10-09`. When you change `style.css`, `main.js` or `content.js`, change that version in `index.html` too (all three places), for example from `2026-10-09.3` to today's date. Browsers then fetch the new files immediately instead of mixing them with older saved copies.
 
